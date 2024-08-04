@@ -15,33 +15,33 @@ async function connectToDatabase() {
     }
 }
 
-// Route to get all articles from the database
+// Route to get all tips from the database
 router.get('/', async (req, res, next) => {
     try {
         const db = await connectToDatabase();
-        const articles = await db.collection('articles').find({}).toArray();
-        res.status(200).json(articles);
+        const tips = await db.collection('tips').find({}).toArray();
+        res.status(200).json(tips);
     } catch (err) {
         console.error('Error fetching tips from database', err);
         res.status(500).json({ error: 'Internal server error' });
     }
 });
 
-// Route to add a articles to the database
+// Route to add a tip to the database
 router.post('/', async (req, res, next) => {
     try {
         const db = await connectToDatabase();
         const tip= {
-            articleId: req.body.id,
-            articleTitle: req.body.title,
-            articleCategory: req.body.category,
-            articleDescription: req.body.description,
-            articleDate: req.body.date
+            id: req.body.id,
+            name: req.body.name,
+            category: req.body.category,
+            description: req.body.description,
+            date: req.body.date
         };
-        await db.collection('article').insertOne(tip);
-        res.status(200).json({ message: 'Article added successfully' });
+        await db.collection('tips').insertOne(tip);
+        res.status(200).json({ message: 'Tip added successfully' });
     } catch (err) {
-        console.error('Error adding article to database', err);
+        console.error('Error adding tip to database', err);
         res.status(500).json({ error: 'Internal server error' });
     }
 });
