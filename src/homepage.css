@@ -1,0 +1,136 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #3C552D;
+    background-color: #EEE2B5;
+}
+
+/* Homepage Container */
+.homepage {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section Styling */
+.header {
+    background-color: #3C552D;
+    color: #EEE2B5;
+    padding: 20px;
+    text-align: center;
+}
+
+.header .app-name {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.header .tagline {
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+/* Introduction Section Styling */
+.intro-section {
+    background-color: #EEE2B5;
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+}
+
+.intro-section h2 {
+    color: #3C552D;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.intro-section p {
+    color: #3C552D;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.start-button {
+    background-color: #CA7373;
+    color: #EEE2B5;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #D7B26D;
+}
+
+/* Questions Section Styling */
+.questions-section {
+    margin-top: 20px;
+}
+
+.question-block {
+    background-color: #D7B26D;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 1.3em;
+    color: #3C552D;
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #CA7373;
+    border-radius: 5px;
+}
+
+.image-explanation {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.question-image {
+    width: 200px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.explanation {
+    color: #3C552D;
+    font-size: 0.9em;
+}
+
+/* Calculate Button */
+.calculate-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.calculate-button {
+    background-color: #CA7373;
+    color: #EEE2B5;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculate-button:hover {
+    background-color: #3C552D;
+}
