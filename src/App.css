@@ -1,38 +1,142 @@
+/* Background image */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./image1.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Send background image behind other elements */
+}
+
+/* App container */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+/* Top bar for login */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.9); /* Opaque background */
+  z-index: 1;
+}
+
+.login-label {
   color: white;
+  font-size: 16px;
+  margin-right: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-input {
+  margin: 0 10px;
+  padding: 8px;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.action-button {
+  margin-left: 15px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  cursor: pointer;
 }
+
+.action-button:hover {
+  background-color: #45a049; 
+}
+
+.register-button {
+  background-color: #2196F3;  
+  margin-right: 20px;
+}
+
+.register-button:hover {
+  background-color: #0b7dda;   
+}
+
+
+/* Menu container for hover effect */
+.menu-container {
+  position: relative;
+  margin-right: auto; /* Pushes menu to the left*/
+}
+
+/* Menu button */
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Hidden side menu - only shows on hover */
+.side-menu {
+  position: absolute;
+  top: 40px; /* Offset from the top-bar */
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for menu */
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the side menu on hover */
+.menu-container:hover .side-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Menu items */
+.menu-item {
+  background: none;
+  border: 1px solid #fff;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Login input fields */
+.login-input {
+  margin: 0 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* Welcome section */
+.welcome-section {
+  position: fixed;
+  top: 160px;         /* Adjust this to control vertical position */
+  left: 40px;         /* Adjust this to control horizontal distance from the left edge */
+  color: white;
+  text-align: left;
+  max-width: 500px;   /* Optional: limit width */
+  z-index: 1;
+}
+
+.welcome-section p {
+  font-size: 20px; /* Adjust to desired font size */
+}
+
